@@ -1,0 +1,120 @@
+
+.container {
+  margin: auto;
+  max-width: 1200px; /* Increase container width */
+  padding: 20px; /* Add padding */
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+}
+.head-container {
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space items horizontally */
+  align-items: center; /* Align items vertically in the center */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+.btn-add {
+  background-color: #007bff; /* Desired blue color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-bottom: 20px; /* Add bottom margin */
+}
+table{
+  width: 100%;
+  border: none;
+  border-collapse: separate; /* Key change: Use separate borders */
+  border-spacing: 10px; /* Add spacing between rows */
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+thead{
+  padding: 12px 15px;
+  text-align: left;
+  margin-bottom: 20px;
+  background-color: #e2dfdf;
+}
+
+tbody {
+  width: 100%;
+  border-collapse: separate; /* Key change: Use separate borders */
+  border-spacing: 10px; /* Add spacing between rows */
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+tr {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add transitions */
+}
+
+tr:hover {
+  transform: translateY(-3px); /* Move slightly up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+td {
+  border: none; /* Remove cell borders */
+  padding: 12px 15px;
+  text-align: left;
+}
+th {
+  background-color: ghostwhite;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+
+.address-cell {
+  word-wrap: break-word;
+  white-space: normal;
+  min-height: 40px;
+}
+
+.add-form-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+button {
+  margin: 5px;
+}
+
+.btn-action-group {
+  display: flex;
+  justify-content: center; /* Center action buttons */
+}
+
+.btn-danger, .btn-edit {
+  border: none;
+  background-color: transparent; /* Remove white background */
+  padding: 5px;
+  cursor: pointer;
+}
+
+.btn-danger img, .btn-edit img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.btn-danger:hover img, .btn-edit:hover img {
+  opacity: 1;
+}
+
+#addForm {
+  display: none;
+  justify-content: space-between;
+  margin: 10px 0;
+}

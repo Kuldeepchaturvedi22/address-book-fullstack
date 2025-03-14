@@ -1,0 +1,46 @@
+<div class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>PERSON ADDRESS FORM</h2>
+      <span class="close-btn" (click)="navigatetohome()">✖</span>
+    </div>
+    <form (ngSubmit)="onSubmit()" #addressForm="ngForm">
+      <label>Full Name</label>
+      <input type="text" name="fullName" [(ngModel)]="person.fullName" required />
+
+      <label>Phone Number</label>
+      <input type="tel" name="phone" [(ngModel)]="person.phone" required />
+
+      <label>Address</label>
+      <textarea name="address" [(ngModel)]="person.address" required></textarea>
+
+      <div class="row">
+        <div class="column">
+          <label>City</label>
+          <select name="city" [(ngModel)]="person.city" required>
+            <option value="">Select City</option>
+            <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+          </select>
+        </div>
+
+        <div class="column">
+          <label>State</label>
+          <select name="state" [(ngModel)]="person.state" required>
+            <option value="">Select State</option>
+            <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+          </select>
+        </div>
+
+        <div class="column">
+          <label>Zip Code</label>
+          <input type="text" name="zip" [(ngModel)]="person.zip" required />
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button type="submit" [disabled]="!addressForm.valid">Add</button>
+        <button type="button" (click)="resetForm()">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>

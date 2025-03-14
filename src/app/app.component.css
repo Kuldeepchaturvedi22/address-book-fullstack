@@ -1,0 +1,45 @@
+.body {
+  border: lightslategrey;
+  background-color: white;
+  margin: 0;
+  /* Remove default body margin */
+}
+.address-book-header {
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: white;
+  margin: auto;
+  max-width: 1200px;
+  /* Increase container width */
+  padding: 20px;
+  /* Add padding */
+}
+
+.icon-container {
+  margin-right: 20px;
+}
+
+.icon-container img {
+  width: 40px;
+  height: auto;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007bff;
+  letter-spacing: 2px;
+}
+
+.book-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 2px;
+}

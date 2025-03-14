@@ -1,0 +1,35 @@
+
+<div class="container">
+  <div class="head-container">
+    <h2 class="heading">Person Details</h2>
+    <button class="btn-add" (click)="navigateToAddAddress()">+ Add Address</button>
+  </div>
+  <!-- Table to display addresses -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Fullname</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip Code</th>
+      <th>Phone Number</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let entry of addresses | keyvalue">
+      <td class="address-cell">{{ entry.value.fullName }}</td>
+      <td class="address-cell">{{ entry.value.address }}</td>
+      <td class="address-cell">{{ entry.value.city }}</td>
+      <td class="address-cell">{{ entry.value.state }}</td>
+      <td class="address-cell">{{ entry.value.zip }}</td>
+      <td class="address-cell">{{ entry.value.phone }}</td>
+      <td class="btn-action-group">
+        <button class="btn-danger" (click)="deleteAddress(entry.key)"><img [src]="deleteUrl" /></button>
+        <button class="btn-edit" (click)="navigateToEditAddress(entry.key)"><img [src]="editUrl"/></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

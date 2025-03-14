@@ -9,4 +9,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'test-app';
+  addressUrl  = './assets/address.svg';
 }
